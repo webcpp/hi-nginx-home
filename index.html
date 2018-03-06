@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>hi-nginx|多语言通用服务器</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+        
+
+        <!-- Custom styles for this template -->
+        <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    </head>
+
+    <body id="page-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">hi-nginx.com</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#about">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#services">语言</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#contact">联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="bg-primary text-white">
+            <div class="container text-center">
+                <h1>Welcome to hi-nginx.com</h1>
+                <p class="lead">这里有世界上最快、最强的 Web 服务器和 Application 服务器</p>
+            </div>
+        </header>
+
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>关于</h2>
+                        <p class="lead">它既是 web 服务器，也是 application 服务器。</p>
+                        <p class="lead">它是 NGINX 的超集。</p>
+                        <p class="lead">它性能强劲，易于开发，部署方便。</p>
+                        <p class="lead">它支持多种语言混合开发 web 应用： </p>
+                        <ul>
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>Lua</li>
+                            <li>Java</li>
+                            <li>PHP</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>语言</h2>
+                        <p class="lead">cpp</p>
+                        <pre><code class="cpp">
+#include "servlet.hpp"
+namespace hi{
+class hello : public servlet {
+    public:
+
+        void handler(request& req, response& res) {
+            res.headers.find("Content-Type")->second = "text/plain;charset=UTF-8";
+            res.content = "hello,world";
+            res.status = 200;
+        }
+
+    };
+}
+
+extern "C" hi::servlet* create() {
+    return new hi::hello();
+}
+
+extern "C" void destroy(hi::servlet* p) {
+    delete p;
+}
+                        </code></pre>
+
+
+                        <p class="lead">python</p>
+                        <pre><code class="python">
+data='{client},{method},{uri},{user_agent},{param}'.format(client=hi_req.client(),method=hi_req.method(),uri=hi_req.uri(),user_agent=hi_req.user_agent(),param=hi_req.param())
+hi_res.header('Content-Type','text/plain;charset=UTF-8')
+hi_res.content(data)
+hi_res.status(200)
+</code></pre>
+                        
+                        <p class="lead">lua</p>
+                        <pre><code class="lua">
+local data=string.format('%s,%s,%s,%s,%s',hi_req:client(),hi_req:method(),hi_req:uri(),hi_req:user_agent(),hi_req:param())
+hi_res:header('Content-Type','text/plain;charset=UTF-8')
+hi_res:content(data)
+hi_res:status(200)
+</code></pre>
+
+                        <p class="lead">java</p>
+                        <pre><code class="java">
+package hi;
+
+public class hello implements hi.servlet {
+
+    public hello() {
+
+    }
+
+    public void handler(hi.request req, hi.response res) {
+        res.headers.get("Content-Type").set(0, "text/plain;charset=UTF-8");
+        res.status = 200;
+        res.content = "hello,world";
+
+    }
+}
+</code></pre>
+
+                        <p class="lead">php</p>
+                        <pre><code class="php keyword">
+require_once 'hi/servlet.php';
+
+class hello implements \hi\servlet {
+
+    public function handler(\hi\request &$req, \hi\response &$res) {
+        $res->headers['Content-Type']='text/plain;charset=UTF-8';
+        $res->content = 'hello,world';
+        $res->status = 200;
+    }
+
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>联系</h2>
+                        <p class="lead">pangpang@hi-nginx.com</p>
+                        <p><a href="https://github.com/webcpp/hi-nginx">https://github.com/webcpp/hi-nginx</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; <a href="https://www.hi-nginx.com/index.html">www.hi-nginx.com</a> 2018</p>
+                <p class="m-0 text-center text-white">粤ICP备17102021号-1</p>
+
+            </div>
+            <!-- /.container -->
+        </footer>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom JavaScript for this theme -->
+        <script src="js/scrolling-nav.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('pre code').each(function (i, block) {
+                    hljs.highlightBlock(block);
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
