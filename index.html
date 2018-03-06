@@ -14,7 +14,7 @@
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-        
+
 
         <!-- Custom styles for this template -->
         <link href="css/scrolling-nav.css" rel="stylesheet">
@@ -37,6 +37,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="#services">语言</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#blog">博客</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="#contact">联系</a>
@@ -113,7 +116,7 @@ hi_res.header('Content-Type','text/plain;charset=UTF-8')
 hi_res.content(data)
 hi_res.status(200)
 </code></pre>
-                        
+
                         <p class="lead">lua</p>
                         <pre><code class="lua">
 local data=string.format('%s,%s,%s,%s,%s',hi_req:client(),hi_req:method(),hi_req:uri(),hi_req:user_agent(),hi_req:param())
@@ -160,6 +163,18 @@ class hello implements \hi\servlet {
                 </div>
             </div>
         </section>
+        
+                <section id="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>博客</h2>
+                        <p>我信奉尼采和爱因斯坦。</p>
+                        <p><a href="https://blog.hi-nginx.com/">https://blog.hi-nginx.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="contact">
             <div class="container">
@@ -192,7 +207,7 @@ class hello implements \hi\servlet {
 
         <!-- Custom JavaScript for this theme -->
         <script src="js/scrolling-nav.js"></script>
-        
+
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>
             $(document).ready(function () {
