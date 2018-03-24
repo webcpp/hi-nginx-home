@@ -135,7 +135,7 @@ def hello_world(req,res,param):
 
 @app.route(r"^/client/?$",['GET','POST'])
 def client(req,res,param):
-    res.content('{}<br>{}<br>{}<br>{}<br>{}'.format(req.client(),req.method(),req.uri(),req.user_agent(),req.param()))
+    res.content('{}&lt;br&gt;{}&lt;br&gt;{}&lt;br&gt;{}&lt;br&gt;{}'.format(req.client(),req.method(),req.uri(),req.user_agent(),req.param()))
     res.status(200)
 
 @app.route(r"^/hello/(?P<who>\w+)?$",['GET'])
