@@ -138,7 +138,7 @@ def client(req,res,param):
     res.content('{}&lt;br&gt;{}&lt;br&gt;{}&lt;br&gt;{}&lt;br&gt;{}'.format(req.client(),req.method(),req.uri(),req.user_agent(),req.param()))
     res.status(200)
 
-@app.route(r"^/hello/(?P<who>\w+)?$",['GET'])
+@app.route(r"^/hello/(?P&lt;who&gt;\w+)?$",['GET'])
 def hello(req,res,param):
     res.content('{}={}'.format('who',param['who']))
     res.status(200)
