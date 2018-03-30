@@ -192,7 +192,7 @@ class index implements \hi\servlet {
             $rs->status = 200;
         });
         
-        $app->add('{^/who/(?Plt;name&gt;\w+)/?$}', array('GET'), function ($rq, $rs, &$param) {
+        $app->add('{^/who/(?P&lt;name&gt;\w+)/?$}', array('GET'), function ($rq, $rs, &$param) {
             $rs->content = 'hello,'.$param['name'];
             $rs->status = 200;
         });
