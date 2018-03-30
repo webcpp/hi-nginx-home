@@ -179,17 +179,28 @@ public class hello implements hi.servlet {
 
                         <p class="lead">php</p>
                         <pre><code class="php keyword">
-require_once 'hi/servlet.php';
 
-class hello implements servlet {
+require_once 'hi/servlet.php';
+require_once 'hi/route.php';
+
+class index implements \hi\servlet {
 
     public function handler(\hi\request $req, \hi\response $res) {
-        $res->headers['Content-Type']='text/plain;charset=UTF-8';
-        $res->content = 'hello,world';
-        $res->status = 200;
+        $app = \hi\route::get_instance();
+        $app->add('{^/$}', array('GET'), function ($rq, $rs, &$param) {
+            $rs->content = 'hello,world';
+            $rs->status = 200;
+        });
+        
+        $app->add('{^/who/(?Plt;name&gt;\w+)/?$}', array('GET'), function ($rq, $rs, &$param) {
+            $rs->content = 'hello,'.$param['name'];
+            $rs->status = 200;
+        });
+        $app->run($req, $res);
     }
 
 }
+
 </code></pre>
 
                     </div>
