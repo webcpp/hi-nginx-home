@@ -196,6 +196,14 @@ class index implements \hi\servlet {
             $rs->content = 'hello,'.$param['name'];
             $rs->status = 200;
         });
+
+        $app->add('{^/phpinfo/?$}', array('GET'), function($rq, $rs, &$param) {
+            ob_start();
+            phpinfo();
+            $rs->content = ob_get_contents();
+            $rs->status = 200;
+            ob_end_clean();
+        });
         $app->run($req, $res);
     }
 
