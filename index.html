@@ -5,11 +5,11 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="hi-nginx-1.5.3已经发布,优化java支持，同时支持多种jsr-223语言">
+        <meta name="description" content="hi-nginx-1.5.4已经发布,优化工作进程退出机制">
         <meta name="keyword" content="hi-nginx nginx python c++ cpp lua java php javascript servlet 服务器 应用服务器 ">
         <meta name="author" content="pangpang@hi-nginx.com">
 
-        <title>hi-nginx-1.5.3已经发布,优化java支持，同时支持多种jsr-223语言</title>
+        <title>hi-nginx-1.5.4已经发布,优化工作进程退出机制</title>
 
         <!-- Bootstrap core CSS -->
         <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -59,7 +59,7 @@
         <header class="bg-primary text-white">
             <div class="container text-center">
                 <h1>Welcome to hi-nginx.com</h1>
-                <p class="lead">世界上最快、最强的 Web 服务器和 Application 服务器</p>
+                <p class="lead">最快、最强的 Web 服务器和 Application 服务器</p>
                 <p class="lead"><a style="color: #fbfbfb" href="https://github.com/webcpp/hi-nginx/releases">Download</a></p>
             </div>
         </header>
@@ -236,6 +236,15 @@ hi_res.headers.get('Content-Type').set(0, 'text/plain;charset=UTF-8')
 hi_res.content = output
 hi_res.status = 200;
 </code></pre>
+
+<p class='lead'>groovy</p>
+<pre>
+<code  class='groovy keyword'>
+    def coll = ["Groovy", "Java", "Scala"]
+    hi_res.content=coll.toString()
+    hi_res.status=200    
+</code>
+</pre>
 
                     </div>
                 </div>
