@@ -1,100 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="hi-nginx-1.5.4已经发布,优化工作进程退出机制">
-        <meta name="keyword" content="hi-nginx nginx python c++ cpp lua java php javascript servlet 服务器 应用服务器 ">
-        <meta name="author" content="pangpang@hi-nginx.com">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="hi-nginx-1.5.4已经发布,优化工作进程退出机制">
+    <meta name="keyword" content="hi-nginx nginx python c++ cpp lua java php javascript servlet 服务器 应用服务器 ">
+    <meta name="author" content="pangpang@hi-nginx.com">
 
-        <title>hi-nginx-1.5.4已经发布,优化工作进程退出机制</title>
+    <title>hi-nginx-1.5.4已经发布,优化工作进程退出机制</title>
 
-        <!-- Bootstrap core CSS -->
-        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 
 
-        <!-- Custom styles for this template -->
-        <link href="/css/scrolling-nav.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/scrolling-nav.css" rel="stylesheet">
 
-    </head>
+</head>
 
-    <body id="page-top">
+<body id="page-top">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">hi-nginx.com</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#about">关于</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#services">语言</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#doc">文档</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#blog">博客</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#repo">仓库</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#contact">联系</a>
-                        </li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">hi-nginx.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">关于</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">语言</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#doc">文档</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#blog">博客</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#repo">仓库</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">联系</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+        <div class="container text-center">
+            <h1>Welcome to hi-nginx.com</h1>
+            <p class="lead">最快、最强的 Web 服务器和 Application 服务器</p>
+            <p class="lead">
+                <a style="color: #fbfbfb" href="https://github.com/webcpp/hi-nginx/releases">Download</a>
+            </p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>关于</h2>
+                    <p class="lead">它既是 web 服务器，也是 application 服务器。</p>
+                    <p class="lead">它是 NGINX 的超集。</p>
+                    <p class="lead">它性能强劲，易于开发，部署方便。</p>
+                    <p class="lead">它支持多种语言混合开发 web 应用： </p>
+                    <ul>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>Lua</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>Javascript</li>
+                        <li>jsr-223 JVM language</li>
                     </ul>
+
                 </div>
             </div>
-        </nav>
+        </div>
+    </section>
 
-        <header class="bg-primary text-white">
-            <div class="container text-center">
-                <h1>Welcome to hi-nginx.com</h1>
-                <p class="lead">最快、最强的 Web 服务器和 Application 服务器</p>
-                <p class="lead"><a style="color: #fbfbfb" href="https://github.com/webcpp/hi-nginx/releases">Download</a></p>
-            </div>
-        </header>
-
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2>关于</h2>
-                        <p class="lead">它既是 web 服务器，也是 application 服务器。</p>
-                        <p class="lead">它是 NGINX 的超集。</p>
-                        <p class="lead">它性能强劲，易于开发，部署方便。</p>
-                        <p class="lead">它支持多种语言混合开发 web 应用： </p>
-                        <ul>
-                            <li>C++</li>
-                            <li>Python</li>
-                            <li>Lua</li>
-                            <li>Java</li>
-                            <li>PHP</li>
-                            <li>Javascript</li>
-                            <li>jsr-223 JVM language</li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2>语言</h2>
-                        <p class="lead">cpp</p>
-                        <pre><code class="cpp">
+    <section id="services" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>语言</h2>
+                    <p class="lead">cpp</p>
+                    <pre><code class="cpp">
 #include "servlet.hpp"
 namespace hi{
 class hello : public servlet {
@@ -119,15 +122,15 @@ extern "C" void destroy(hi::servlet* p) {
                         </code></pre>
 
 
-                        <p class="lead">python</p>
-                        <pre><code class="python">
+                    <p class="lead">python</p>
+                    <pre><code class="python">
 data='{client},{method},{uri},{user_agent},{param}'.format(client=hi_req.client(),method=hi_req.method(),uri=hi_req.uri(),user_agent=hi_req.user_agent(),param=hi_req.param())
 hi_res.header('Content-Type','text/plain;charset=UTF-8')
 hi_res.content(data)
 hi_res.status(200)
-</code></pre>
-                        或者使用<a href="https://github.com/webcpp/hi.py">hi.py</a>框架：
-                        <pre><code class="python">
+</code></pre> 或者使用
+                    <a href="https://github.com/webcpp/hi.py">hi.py</a>框架：
+                    <pre><code class="python">
 from hi import hi
 app =hi()
 
@@ -155,16 +158,16 @@ if __name__ == '__main__':
 
 </code></pre>
 
-                        <p class="lead">lua</p>
-                        <pre><code class="lua">
+                    <p class="lead">lua</p>
+                    <pre><code class="lua">
 local data=string.format('%s,%s,%s,%s,%s',hi_req:client(),hi_req:method(),hi_req:uri(),hi_req:user_agent(),hi_req:param())
 hi_res:header('Content-Type','text/plain;charset=UTF-8')
 hi_res:content(data)
 hi_res:status(200)
 </code></pre>
 
-                        <p class="lead">java</p>
-                        <pre><code class="java">
+                    <p class="lead">java</p>
+                    <pre><code class="java">
 package hi;
 
 public class hello implements hi.servlet {
@@ -182,8 +185,8 @@ public class hello implements hi.servlet {
 }
 </code></pre>
 
-                        <p class="lead">php</p>
-                        <pre><code class="php keyword">
+                    <p class="lead">php</p>
+                    <pre><code class="php keyword">
 
 require_once 'hi/servlet.php';
 require_once 'hi/route.php';
@@ -216,8 +219,8 @@ class index implements \hi\servlet {
 
 </code></pre>
 
-                        <p class="lead">javascript</p>
-                        <pre><code class="javascript keyword">
+                    <p class="lead">javascript</p>
+                    <pre><code class="javascript keyword">
 if (typeof (Mustache) == 'undefined') {
     load('https://cdn.bootcss.com/mustache.js/2.3.0/mustache.min.js')
 }
@@ -237,96 +240,105 @@ hi_res.content = output
 hi_res.status = 200;
 </code></pre>
 
-<p class='lead'>groovy</p>
-<pre>
-<code  class='groovy keyword'>
+                    <p class='lead'>groovy</p>
+                    <pre><code  class='groovy keyword'>
     def coll = ["Groovy", "Java", "Scala"]
     hi_res.content=coll.toString()
     hi_res.status=200    
-</code>
-</pre>
+</code></pre>
 
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="doc">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2>文档</h2>
-                        <p><a href="https://doc.hi-nginx.com">hi-nginx gitbook</a></p>
-                        <p><a href="https://github.com/webcpp/hi-nginx-demo">https://github.com/webcpp/hi-nginx-demo</a></p>
-                        <p><a href="http://www.cnblogs.com/hi-nginx/">http://www.cnblogs.com/hi-nginx</a></p>
-                    </div>
+    <section id="doc">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>文档</h2>
+                    <p>
+                        <a href="https://doc.hi-nginx.com">hi-nginx gitbook</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/webcpp/hi-nginx-demo">https://github.com/webcpp/hi-nginx-demo</a>
+                    </p>
+                    <p>
+                        <a href="http://www.cnblogs.com/hi-nginx/">http://www.cnblogs.com/hi-nginx</a>
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="blog">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2>博客</h2>
-                        <p>我信奉尼采和爱因斯坦。</p>
-                        <p><a href="https://blog.hi-nginx.com/">https://blog.hi-nginx.com</a></p>
-                    </div>
+    <section id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>博客</h2>
+                    <p>我信奉尼采和爱因斯坦。</p>
+                    <p>
+                        <a href="https://blog.hi-nginx.com/">https://blog.hi-nginx.com</a>
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="repo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2>仓库</h2>
-                        <p><a href="https://github.com/webcpp/hi-nginx">https://github.com/webcpp/hi-nginx</a></p>
-                    </div>
+    <section id="repo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>仓库</h2>
+                    <p>
+                        <a href="https://github.com/webcpp/hi-nginx">https://github.com/webcpp/hi-nginx</a>
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2>联系</h2>
-                        <p class="lead">pangpang@hi-nginx.com</p>
-                    </div>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>联系</h2>
+                    <p class="lead">pangpang@hi-nginx.com</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="py-5 bg-dark">
-            <div class="container">
-                <p class="m-0 text-center text-white">Copyright &copy; <a href="https://www.hi-nginx.com/index.html">www.hi-nginx.com</a> 2018</p>
-                <p class="m-0 text-center text-white">粤ICP备17102021号-1</p>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy;
+                <a href="https://www.hi-nginx.com/index.html">www.hi-nginx.com</a> 2018</p>
+            <p class="m-0 text-center text-white">粤ICP备17102021号-1</p>
 
-            </div>
-            <!-- /.container -->
-        </footer>
+        </div>
+        <!-- /.container -->
+    </footer>
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="/vendor/jquery/jquery.min.js"></script>
-        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Plugin JavaScript -->
-        <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Custom JavaScript for this theme -->
-        <script src="/js/scrolling-nav.js"></script>
+    <!-- Custom JavaScript for this theme -->
+    <script src="/js/scrolling-nav.js"></script>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('pre code').each(function (i, block) {
-                    hljs.highlightBlock(block);
-                });
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('pre code').each(function (i, block) {
+                hljs.highlightBlock(block);
             });
-        </script>
+        });
+    </script>
 
-    </body>
+</body>
 
 </html>
