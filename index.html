@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="hi-nginx-2.0.2发布,升级nginx至v-1.17.8">
+    <meta name="description" content="hi-nginx-2.0.3发布,新增quickjs支持">
     <meta name="keyword" content="hi-nginx nginx python c++ cpp lua java php javascript servlet 服务器 应用服务器 ">
     <meta name="author" content="pangpang@hi-nginx.com">
 
-    <title>hi-nginx-2.0.2发布,升级nginx至v-1.17.8</title>
+    <title>hi-nginx-2.0.3发布,新增quickjs支持</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -251,11 +251,12 @@ hi_res.status = 200;
     hi_res.status=200    
 </code></pre>
 
-                    <p class='lead'>duktape</p>
+                    <p class='lead'>quickjs</p>
                     <pre><code  class='javascript keyword'>
-    hi_res.header('Content-Type','text/plain;charset=UTF-8')
-    hi_res.content('hello,world')
-    hi_res.status(200)   
+import * as hi from "hi";
+hi.header('Content-Type','text/plain;charset=UTF-8')
+hi.content('hello,world')
+hi.status(200)  
 </code></pre>
 
                 </div>
