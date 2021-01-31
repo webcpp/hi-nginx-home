@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="hi-nginx-2.1.1发布,update nginx to 1.19.6">
+    <meta name="description" content="hi-nginx-2.1.2发布,remove java-javascript support">
     <meta name="keyword" content="hi-nginx nginx python c++ cpp lua java php javascript servlet 服务器 应用服务器 ">
     <meta name="author" content="pangpang@hi-nginx.com">
 
-    <title>hi-nginx-2.1.1发布,update nginx to 1.19.6</title>
+    <title>hi-nginx-2.1.2发布,remove java-javascript support</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -222,35 +222,6 @@ class index implements \hi\servlet {
 }
 
 </code></pre>
-
-                    <p class="lead">javascript</p>
-                    <pre><code class="javascript keyword">
-if (typeof (Mustache) == 'undefined') {
-    load('https://cdn.bootcss.com/mustache.js/2.3.0/mustache.min.js')
-}
-
-
-var list = java.util.Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
-var template = "{{#list}}* {{.}}\n{{/list}}"
-var key = 'test', output
-if (hi_req.cache.containsKey(key)) {
-    output = hi_req.cache.get(key)
-} else {
-    output = Mustache.render(template, {'list': JSON.parse(list.toString())})
-    hi_res.cache.put(key, output)
-}
-hi_res.headers.get('Content-Type').set(0, 'text/plain;charset=UTF-8')
-hi_res.content = output
-hi_res.status = 200;
-</code></pre>
-
-                    <p class='lead'>groovy</p>
-                    <pre><code  class='groovy keyword'>
-    def coll = ["Groovy", "Java", "Javascript"]
-    hi_res.content=coll.toString()
-    hi_res.status=200    
-</code></pre>
-
                     <p class='lead'>quickjs</p>
                     <pre><code  class='javascript keyword'>
 import * as hi from "hi";
