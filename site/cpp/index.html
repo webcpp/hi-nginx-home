@@ -582,6 +582,12 @@
     <span class="k">delete</span> <span class="n">p</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><code>g++ -std=c++11 -I/usr/local/nginx/include  -shared -fPIC hello.cpp -o hello.so``install hello.so /usr/local/nginx/cpp</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">location</span> <span class="p">~</span> <span class="sr">\.do</span> <span class="p">{</span>
+    <span class="kn">rewrite</span> <span class="s">^/(.*)\.do</span>$ <span class="s">/</span><span class="nv">$1</span> <span class="s">break</span><span class="p">;</span>
+    <span class="kn">hi</span> <span class="s">cpp/hello.so</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
